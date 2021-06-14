@@ -27,7 +27,7 @@ public class BankAccountSystem
 				{
 					int b=bal[i];
 					
-					System.out.printin("Choose the operation you want to perform:\nChoose 1 for Withdrawal\nChoose 2 for Deposit\nChoose 3 to Check Balance\nChoose 4 for Types Of Cards Avaialabe\nChoose 5 for Money Transfer\nChoose 6 to Change Pin\nChoose 7 for Investment Options");
+					System.out.printin("Choose the operation you want to perform:\nChoose 1 for Withdrawal\nChoose 2 for Deposit\nChoose 3 to Check Balance\nChoose 4 to Display Types Of Cards Availaabe\nChoose 5 for Money Transfer\nChoose 6 to Change Pin\nChoose 7 to Display Investment Options");
 					int ch=Integer.parseInt(br.readLine());
 					switch(ch)
 					{
@@ -42,17 +42,17 @@ public class BankAccountSystem
 							}
 							else
 								System.out.println("You cannot withdraw this amount as the balance in your account is less than the amount you want to withdraw. Please try again with a smaller amount.");
-						break;
+							break;
 						case 2:
 							System.out.println("Enter the amount you want to deposit");
 							int deposit=Integer.parseInt(br.readLine());
 							System.out.println("Deposit the Cash");
 							b+=deposit;
 							System.out.printin("The new balance of your account is Rs."+b);
-						break;
+							break;
 						case 3:
 							System.out.printin("Your balance is Rs."+b);
-						break;
+							break;
 						case 4:
 							System.out.println("Choose The Below options to know about the cards we provide:\nChoose 1 for Visa/Mastercard Debit Card\nChoose 2 for Visa/Mastercard Debit Card\nChoose 3 for Internatinal Debit/Credit Card\nChoose 4 for Gold Member Credit Card");
 							int num=Integer.parseInt(br.readLine());
@@ -83,7 +83,7 @@ public class BankAccountSystem
 							}
 							else
 								System.out.println("Error! Wrong Input. Please Try again");	
-						break;
+							break;
 						case 5:
 							System.out.println("Enter the amount you want to transfer");
 							int trans1=Integer.parseInt(br.readLine());
@@ -114,7 +114,7 @@ public class BankAccountSystem
 							}
 							else
 								System.out.printin("You cannot transfer this amount as the balance in your account is less than the amount you want to transfer. Please try again with a smaller amount.");
-						break;
+							break;
 						case 6:
 							System.out.println("Enter the new pin");
 							int newpin=Integer.parseInt(br.readLine());
@@ -124,7 +124,7 @@ public class BankAccountSystem
 								System.out.println("Your pin has been changed");
 							else
 								System.out.println("An error occured. Please try again.");
-						break;
+							break;
 						case 7:
 							System.out.println("Choose below to view the Investment Options available");
 							System.out.println("Choose 1 for Mutual Funds");
@@ -159,8 +159,8 @@ public class BankAccountSystem
 								System.out.println("Error! Wrong Input. Please Try again");
 							break;
 
-							default:
-								System.out.println("Wrong input. Please try again.");
+						default:
+							System.out.println("Wrong input. Please try again.");
 							break;
 					}
 				}
